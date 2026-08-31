@@ -6,7 +6,7 @@ Frontend assignment solutions for Karthik, a third-year B.E. Computer Science st
 
 ```text
 assignments/
-├── 1-course-registration/   # Dynamic course registration form
+├── 1602-24-733-016 Assignment 1/ # Dynamic course registration form
 ├── 2-feedback-form/         # HTML feedback form
 ├── 3-factorial/             # prompt(), factorial function, and alert()
 └── about-me/                # Biodata page
