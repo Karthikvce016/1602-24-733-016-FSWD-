@@ -5,7 +5,7 @@ Frontend assignment solutions for Karthik, a third-year B.E. Computer Science st
 ## Repository structure
 
 ```text
-1602-24-733-016 assignment1/
+1602-24-733-016 karthik assignment1/
 ├── Question 1 - Course Registration/
 ├── Question 2 - Feedback Form/
 ├── Question 3 - Factorial/
