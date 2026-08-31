@@ -10,6 +10,7 @@ Frontend assignment solutions for Karthik, a third-year B.E. Computer Science st
 ├── Question 2 - Feedback Form/
 ├── Question 3 - Factorial/
 └── about-me/                # Biodata page
+lab/                          # Laboratory exercises
 ```
 
 Open any question folder's `index.html` in a browser to run it. No build step is required.
