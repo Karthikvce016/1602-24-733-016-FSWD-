@@ -6,12 +6,13 @@ Frontend assignment solutions for Karthik, a third-year B.E. Computer Science st
 
 ```text
 assignments/
-├── 1602-24-733-016 Assignment 1/ # Dynamic course registration form
-├── 2-feedback-form/         # HTML feedback form
-├── 3-factorial/             # prompt(), factorial function, and alert()
+├── 1602-24-733-016 Assignment 1/
+│   ├── Question 1 - Course Registration/
+│   ├── Question 2 - Feedback Form/
+│   └── Question 3 - Factorial/
 └── about-me/                # Biodata page
 ```
 
-Open any folder's `index.html` in a browser to run it. No build step is required.
+Open any question folder's `index.html` in a browser to run it. No build step is required.
 
 The pages use Bootstrap from its CDN and include custom CSS for the visual design. The About Me page uses a CSS initials avatar because no photograph was provided.
