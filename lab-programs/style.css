@@ -1,0 +1,42 @@
+body {
+    font-family: Arial;
+    margin: 40px;
+}
+
+h1 {
+    color: blue;
+}
+
+form {
+    width: 400px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    margin-top: 5px;
+    padding: 5px;
+    width: 100%;
+}
+
+input[type="radio"] {
+    width: auto;
+}
+
+a {
+    background-color: blue;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+input[type="submit"] {
+    width: auto;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+}
