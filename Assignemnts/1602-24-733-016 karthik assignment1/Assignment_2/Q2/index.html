@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2 - Page Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function Header(props) {
+            return (
+                <header className="header">
+                    <h1>{props.title}</h1>
+                </header>
+            );
+        }
+
+        function Sidebar() {
+            return (
+                <aside className="sidebar">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </aside>
+            );
+        }
+
+        function Content() {
+            return (
+                <main className="content">
+                    <h2>Welcome to the Portal</h2>
+                    <p>This layout demonstrates component composition in React.</p>
+                    <p>The page is constructed by composing separate components: Header, Sidebar, Content, and Footer.</p>
+                </main>
+            );
+        }
+
+        function Footer() {
+            return (
+                <footer className="footer">
+                    <p>&copy; 2026 Student Web Portal. All rights reserved.</p>
+                </footer>
+            );
+        }
+
+        function Layout(props) {
+            return (
+                <div className="layout">
+                    <Header title={props.title} />
+                    <div className="main-section">
+                        <Sidebar />
+                        <Content />
+                    </div>
+                    <Footer />
+                </div>
+            );
+        }
+
+        function App() {
+            return (
+                <Layout title="Student Dashboard" />
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>

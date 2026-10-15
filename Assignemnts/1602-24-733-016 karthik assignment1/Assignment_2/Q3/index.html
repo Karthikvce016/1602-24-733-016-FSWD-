@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3 - React Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function Calculator() {
+            const [display, setDisplay] = React.useState('');
+
+            function handleButtonClick(value) {
+                setDisplay(display + value);
+            }
+
+            function handleClear() {
+                setDisplay('');
+            }
+
+            function handleCalculate() {
+                try {
+                    setDisplay(eval(display).toString());
+                } catch (error) {
+                    setDisplay('Error');
+                }
+            }
+
+            return (
+                <div className="calculator-container">
+                    <h2>React Calculator</h2>
+                    <div className="calculator">
+                        <div className="display">{display || '0'}</div>
+                        <div className="button-grid">
+                            <button onClick={() => handleButtonClick('7')}>7</button>
+                            <button onClick={() => handleButtonClick('8')}>8</button>
+                            <button onClick={() => handleButtonClick('9')}>9</button>
+                            <button className="op-btn" onClick={() => handleButtonClick('/')}>/</button>
+
+                            <button onClick={() => handleButtonClick('4')}>4</button>
+                            <button onClick={() => handleButtonClick('5')}>5</button>
+                            <button onClick={() => handleButtonClick('6')}>6</button>
+                            <button className="op-btn" onClick={() => handleButtonClick('*')}>*</button>
+
+                            <button onClick={() => handleButtonClick('1')}>1</button>
+                            <button onClick={() => handleButtonClick('2')}>2</button>
+                            <button onClick={() => handleButtonClick('3')}>3</button>
+                            <button className="op-btn" onClick={() => handleButtonClick('-')}>-</button>
+
+                            <button className="clear-btn" onClick={handleClear}>C</button>
+                            <button onClick={() => handleButtonClick('0')}>0</button>
+                            <button className="equal-btn" onClick={handleCalculate}>=</button>
+                            <button className="op-btn" onClick={() => handleButtonClick('+')}>+</button>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        function App() {
+            return (
+                <div>
+                    <Calculator />
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
